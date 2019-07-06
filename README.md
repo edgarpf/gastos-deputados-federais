@@ -1,36 +1,32 @@
 # Gastos dos deputados federais [![Build Status](https://travis-ci.org/edgarpf/gastos-deputados-federais.svg?branch=master)](https://travis-ci.org/edgarpf/gastos-deputados-federais) [![Maintainability](https://api.codeclimate.com/v1/badges/2902440b44466c6c9ffa/maintainability)](https://codeclimate.com/github/edgarpf/gastos-deputados-federais/maintainability)
-Uma API REST feita em Spring Boot para monitorar os gastos deputados federais.
+A REST API made with Spring Boot to monitor brazilian deputies spending.
 
 ## Docker
 ```
 docker container run -p 8098:8098 edgarpf/gastosdeputadosfederais
 ```
 
-Acesse http://localhost:8098 e você verá os gastos dos deputados no ano corrente retornados em JSON conforme figura abaixo.
+Access http://localhost:8098 and you will see brazilian deputies spendings in the year in JSON format like the image below.
 
 ![JSON](https://i.ibb.co/RBfB8Qd/Capturar.png)
 
 # FAQ
 
-## Que dados são exibidos no JSON?
-
-Gastos dos deputados federais no ano atual.
-
-## De onde vem os dados dos gastos dos deputados?
+## Where does the data come from?
 
 [Dados abertos](https://www.camara.leg.br/transparencia/gastos-parlamentares)
 
-## Alguns dados estão vindo null
+## Some data are shown as null
 
-Confira na página específica do deputado em questão. Alguns dados não estão disponíveis e pode levar algum tempo até que estejam.
+Some data are not displayed. Try to contact Dados abertos to request a update.
 
-## Como funciona a aplicação?
+## How does the application work?
 
-1 - Quando a aplicação inicia ela starta um srapper na página de gastos de cada deputado e armazena esse dados em um banco na mémoria(h2).
+1 - When the application starts a srapper will read each deputy`s page and store the data in a memory database(h2).
 
-2 - Caso algum cliente faça uma requisição esse banco é consultado e todos os deputados e dados são retornados em JSON.
+2 - If a cliente makes a request to the application this database is read and the tada is returned in JSON format.
 
-3 - Á meia-noite o scrapper é acionado novamente e regrava os dados na memória mantendo-os atualizados.
+3 - At midnight the scrapper will run again and the data will de updated.
 
 
 
