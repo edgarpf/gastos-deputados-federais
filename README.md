@@ -18,7 +18,7 @@ Access http://localhost:8098 and you will see brazilian deputies spendings in th
 
 ## Some data are shown as null
 
-Some data are not displayed. Try to contact Dados abertos to request a update.
+Some data are not displayed. Try to contact Dados Abertos to request a update.
 
 ## How does the application work?
 
