@@ -6,7 +6,7 @@ A REST API made with Spring Boot to monitor brazilian deputies spending.
 docker container run -p 8098:8098 edgarpf/gastosdeputadosfederais
 ```
 
-Access http://localhost:8098 and you will see brazilian deputies spendings in the year in JSON format like the image below.
+Access http://localhost:8098 and you will see brazilian deputies spending in the year in JSON format like the image below.
 
 ![JSON](https://i.ibb.co/RBfB8Qd/Capturar.png)
 
