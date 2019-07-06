@@ -22,11 +22,11 @@ Some data are not displayed. Try to contact Dados Abertos to request a update.
 
 ## How does the application work?
 
-1 - When the application starts a srapper will read each deputy`s page and store the data in a memory database(h2).
+1 - When the application starts a sraper will read each deputy`s page and store the data in a memory database(h2).
 
 2 - If a cliente makes a request to the application this database is read and the tada is returned in JSON format.
 
-3 - At midnight the scrapper will run again and the data will de updated.
+3 - At midnight the scraper will run again and the data will de updated.
 
 
 
