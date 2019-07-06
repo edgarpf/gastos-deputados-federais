@@ -1,7 +1,6 @@
 .classpath
 .project
 .settings/
-Dockerfile
 HELP.md
 target/
 .mvn/
