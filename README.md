@@ -1,5 +1,5 @@
 # Gastos dos deputados federais [![Build Status](https://travis-ci.org/edgarpf/gastos-deputados-federais.svg?branch=master)](https://travis-ci.org/edgarpf/gastos-deputados-federais) [![Maintainability](https://api.codeclimate.com/v1/badges/2902440b44466c6c9ffa/maintainability)](https://codeclimate.com/github/edgarpf/gastos-deputados-federais/maintainability)
-Uma API REST feita em Spring Boot para monitorar os gastos deputados federais
+Uma API REST feita em Spring Boot para monitorar os gastos deputados federais.
 
 ## Docker
 ```
@@ -26,7 +26,7 @@ Confira na página específica do deputado em questão. Alguns dados não estão
 
 ## Como funciona a aplicação?
 
-1 - Quando a aplicação inicia ela starta um srapper na página de gastos de cada deputado e armazena esse dados em um banco na mémoria(h2)
+1 - Quando a aplicação inicia ela starta um srapper na página de gastos de cada deputado e armazena esse dados em um banco na mémoria(h2).
 
 2 - Caso algum cliente faça uma requisição esse banco é consultado e todos os deputados e dados são retornados em JSON.
 
