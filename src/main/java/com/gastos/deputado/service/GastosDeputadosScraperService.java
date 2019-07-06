@@ -52,24 +52,32 @@ public class GastosDeputadosScraperService {
 
 			List<Worker> workers = new ArrayList<>(limit);
 
-			for (int j = 0; j < limit; j++) {
-				Worker worker = new Worker(urlDeputado + deputies.get(i * maxRequests + j).attr("value"));
-				workers.add(worker);
-				new Thread(worker).start();
-			}
-
-			for (int j = 0; j < limit; j++) {
-				Elements spendings = workers.get(j).waitForResults();
-				int index = i * maxRequests + j;
-				listDeputies.add(new Deputado());
-				listDeputies.get(index).setRenunciouAuxilioMoradia(spendings.get(3).text().contains("1"));
-				listDeputies.get(index).setNome(spendings.get(4).text());
-				listDeputies.get(index).setCotaParlamentar(spendings.size() < 6 ? null : spendings.get(5).text());
-				listDeputies.get(index).setVerbaGabinete(spendings.size() < 7 ? null : spendings.get(6).text());
-				listDeputies.get(index).setAuxilioMoradia(spendings.size() < 8 ? null : spendings.get(7).text());
-			}
+			gerarThreads(deputies, i, limit, workers);
+			preencherListaDeDeputados(listDeputies, i, limit, workers);
 		}
 
 		return listDeputies;
+	}
+
+	private void gerarThreads(Elements deputies, int i, int limit, List<Worker> workers) {
+		for (int j = 0; j < limit; j++) {
+			Worker worker = new Worker(urlDeputado + deputies.get(i * maxRequests + j).attr("value"));
+			workers.add(worker);
+			new Thread(worker).start();
+		}
+	}
+
+	private void preencherListaDeDeputados(List<Deputado> listDeputies, int i, int limit, List<Worker> workers)
+			throws InterruptedException {
+		for (int j = 0; j < limit; j++) {
+			Elements spendings = workers.get(j).waitForResults();
+			int index = i * maxRequests + j;
+			listDeputies.add(new Deputado());
+			listDeputies.get(index).setRenunciouAuxilioMoradia(spendings.get(3).text().contains("1"));
+			listDeputies.get(index).setNome(spendings.get(4).text());
+			listDeputies.get(index).setCotaParlamentar(spendings.size() < 6 ? null : spendings.get(5).text());
+			listDeputies.get(index).setVerbaGabinete(spendings.size() < 7 ? null : spendings.get(6).text());
+			listDeputies.get(index).setAuxilioMoradia(spendings.size() < 8 ? null : spendings.get(7).text());
+		}
 	}
 }
