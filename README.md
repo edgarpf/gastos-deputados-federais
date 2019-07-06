@@ -24,7 +24,7 @@ Some data are not displayed. Try to contact Dados Abertos to request a update.
 
 1 - When the application starts a sraper will read each deputy`s page and store the data in a memory database(h2).
 
-2 - If a cliente makes a request to the application this database is read and the tada is returned in JSON format.
+2 - If a cliente makes a request to the application this database is read and the data is returned in JSON format.
 
 3 - At midnight the scraper will run again and the data will de updated.
 
