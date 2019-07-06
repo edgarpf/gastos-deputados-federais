@@ -6,7 +6,7 @@ Uma API REST feita em Spring Boot para monitorar os gastos deputados federais
 docker container run -p 8098:8098 edgarpf/gastosdeputadosfederais
 ```
 
-Acesse (localhost:8098) e você verá os gastos dos deputados no ano corrente retornados em JSON conforme figura abaixo.
+Acesse http://localhost:8098 e você verá os gastos dos deputados no ano corrente retornados em JSON conforme figura abaixo.
 
 ![JSON](https://i.ibb.co/RBfB8Qd/Capturar.png)
 
@@ -18,7 +18,7 @@ Gastos dos deputados federais no ano atual.
 
 ## De onde vem os dados dos gastos dos deputados?
 
-Dados abertos(https://www.camara.leg.br/transparencia/gastos-parlamentares)
+[Dados abertos](https://www.camara.leg.br/transparencia/gastos-parlamentares)
 
 ## Alguns dados estão vindo null
 
