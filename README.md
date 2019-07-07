@@ -1,4 +1,7 @@
-# Gastos dos deputados federais [![Build Status](https://travis-ci.org/edgarpf/gastos-deputados-federais.svg?branch=master)](https://travis-ci.org/edgarpf/gastos-deputados-federais) ![JSON](https://s3.amazonaws.com/assets.coveralls.io/badges/coveralls_93.svg) [![Maintainability](https://api.codeclimate.com/v1/badges/2902440b44466c6c9ffa/maintainability)](https://codeclimate.com/github/edgarpf/gastos-deputados-federais/maintainability)
+[1]: https://coveralls.io/github/edgarpf/gastos-deputados-federais?branch=master
+[2]: https://s3.amazonaws.com/assets.coveralls.io/badges/coveralls_93.svg
+
+# Gastos dos deputados federais [![Build Status](https://travis-ci.org/edgarpf/gastos-deputados-federais.svg?branch=master)](https://travis-ci.org/edgarpf/gastos-deputados-federais) [![Bower.io: A Frontend Package Manager. logo][2]][1] [![Maintainability](https://api.codeclimate.com/v1/badges/2902440b44466c6c9ffa/maintainability)](https://codeclimate.com/github/edgarpf/gastos-deputados-federais/maintainability)
 A REST API made with Spring Boot to monitor brazilian deputies spending.
 
 ## Docker
